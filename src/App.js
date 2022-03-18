@@ -1,13 +1,15 @@
 
 import Menubar from './components/menubar/Menubar';
+import Products from './components/products/Products';
 import './App.css';
 
 
 function App() {
   return (
     <div className="App">
-      <h2 className='text-danger'>Hello from  Laizu</h2>
       <Menubar></Menubar>
+      <Products></Products>
+     
     </div>
   );
 }
