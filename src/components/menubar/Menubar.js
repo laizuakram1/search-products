@@ -1,7 +1,7 @@
 import React from 'react';
 import './Menubar.css'
 
-const Menubar = () => {
+const Menubar = (props) => {
     return (
         <div>
             <nav className='container fs-5 mt-4'>
@@ -11,7 +11,7 @@ const Menubar = () => {
                     <div className='col-md-10'>
                         <ul className='list-unstyled d-flex justify-content-end me-5'>
                         <li className='me-5'>Home</li>
-                        <li className='me-5'>Cart</li>
+                        <li className='me-5'>Cart <sup>{props.count}</sup></li>
                         <li className='me-5'>Contact</li>
                         </ul>
                     </div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Product from './product/Product';
 import './Products.css'
-const Products = () => {
+const Products = ({SetCartCount, MinusCartCount}) => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
@@ -19,7 +19,8 @@ const Products = () => {
                      image = {product.image}
                      title = {product.title.slice(0, 10)}
                      price = {product.price}
-
+                    SetCartCount = {SetCartCount}
+                    MinusCartCount = {MinusCartCount}
                      key = {product.id}
                 ></Product>)
             }
