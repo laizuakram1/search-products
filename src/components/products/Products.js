@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import ReactModals from '../ReactModals/ReactModals';
 import Product from './product/Product';
 import './Products.css'
+
+
+
+
 const Products = ({SetCartCount, MinusCartCount}) => {
     const [products, setProducts] = useState([])
 
@@ -26,7 +29,7 @@ const Products = ({SetCartCount, MinusCartCount}) => {
                 ></Product>)
             }
             </div>
-            <ReactModals></ReactModals>
+         
         </div>
     );
 };

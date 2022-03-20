@@ -1,31 +1,29 @@
-import { Modal } from 'bootstrap';
-import { Button } from 'bootstrap';
-import React from 'react';
+import React, { useState } from 'react';
+import { Button, Modal } from 'react-bootstrap';
 
-const ReactModals = ({show, setShow}) => {
-   
+const ReactModals = (props) => {
+    const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    console.log('laizu');
-    
+    const handleShow = () => setShow(true);
     return (
         <>
-        {/* <Button variant="primary" onClick={handleShow}>
-          Launch demo modal
+        <Button className='btn btn-info me-3' variant="primary" onClick={handleShow}>
+          Details
         </Button>
-   */}
+  
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>{}</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Body>{props.image}</Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            {/* <Button variant="primary" onClick={handleShow}>
+            <Button variant="primary" onClick={handleClose}>
               Save Changes
-            </Button> */}
+            </Button>
           </Modal.Footer>
         </Modal>
       </>
