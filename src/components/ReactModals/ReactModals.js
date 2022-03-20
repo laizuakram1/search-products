@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 
-const ReactModals = (props) => {
+const ReactModals = ({image, title}) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -14,9 +14,11 @@ const ReactModals = (props) => {
   
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>{}</Modal.Title>
+            <Modal.Title>{title}</Modal.Title>
           </Modal.Header>
-          <Modal.Body>{props.image}</Modal.Body>
+          <Modal.Body>
+              <img src={image} alt="" />
+          </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
               Close

@@ -16,7 +16,7 @@ const Product = ({image, title, price, SetCartCount, MinusCartCount}) => {
             <button onClick={MinusCartCount} className='button btn btn-danger me-3'>Delete</button>
             {/* <button className='button btn btn-info me-3'>Details
             </button> */}
-            <ReactModals items = {{image, title}}></ReactModals>
+            <ReactModals image = {image} title = {title}></ReactModals>
 
         </div>
     );
