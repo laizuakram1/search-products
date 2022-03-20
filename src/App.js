@@ -4,6 +4,7 @@ import Products from './components/products/Products';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
+import ReactModals from './components/ReactModals/ReactModals';
 
 
 
@@ -24,6 +25,7 @@ function App() {
       <Products 
       SetCartCount = {SetCartCount}
       MinusCartCount = {MinusCartCount}
+     
       ></Products>
      
       
